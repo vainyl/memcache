@@ -1,3 +1,6 @@
 services:
   cache.factory.memcached:
     class: Vainyl\Memcached\Factory\MemcachedCacheFactory
+    arguments: ['@connection.storage']
+  connection.factory.memcached:
+    class: Vainyl\Memcached\Factory\MemcachedConnectionFactory
